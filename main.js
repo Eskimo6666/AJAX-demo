@@ -1,5 +1,7 @@
 myButton.addEventListener('click',(e)=>{
     let request = new XMLHttpRequest()
+    request.open('get','http://jack.com:8002/xxx')
+    request.send()
     request.onreadystatechange = ()=>{
         if(request.readyState === 4){
             console.log('请求响应都完毕了')
@@ -16,7 +18,5 @@ myButton.addEventListener('click',(e)=>{
             }
         }
     }
-    request.open('POST','/xxx')
    
-    request.send()
 })
